@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card with RGB Glow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            max-width: 300px;
+            margin: 0px;
+            padding: 20px;
+            background-color: black;
+            border-radius: 9px;
+            box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2); /* Base shadow */
+            animation: rgb-glow 3s infinite;
+        }
+
+        .card-title {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .card-content {
+            color: white;
+        }
+
+        @keyframes rgb-glow {
+            0% {
+                box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.7),
+                            0 0 30px 10px rgba(255, 0, 0, 0.5);
+            }
+            25% {
+                box-shadow: 0 0 15px 5px rgba(0, 255, 0, 0.7),
+                            0 0 30px 10px rgba(0, 255, 0, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 15px 5px rgba(0, 0, 255, 0.7),
+                            0 0 30px 10px rgba(0, 0, 255, 0.5);
+            }
+            75% {
+                box-shadow: 0 0 15px 5px rgba(255, 255, 0, 0.7),
+                            0 0 30px 10px rgba(255, 255, 0, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 15px 5px rgba(255, 0, 255, 0.7),
+                            0 0 30px 10px rgba(255, 0, 255, 0.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h3 class="card-title">Who am I?</h3>
+        <p class="card-content">Hello there. My name is Luis, I'm 18 y/o. I like editing and programming. I'm single ✌️. Sometimes people think I'm weird, but I'm just an ambivert. I like making new friends and taking good opportunities for myself.I like kpop and sometimes i edit idols just for fun.</p>
+    </div>
+</body>
+</html>
+</html>
